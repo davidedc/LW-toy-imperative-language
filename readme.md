@@ -3,9 +3,9 @@ A small interpreter for the didactic (toy) LW imperative language.
 
 LW is a minimal imperative language used in some universities to teach the basics of imperative languages, and the concepts of static analysis, basic parsing, handling scope, what a state is, the difference between an expression and a command, and how to walk an AST tree to do static checks and to run the program.
 
-I did this compact LW (and it's extension, LWPlus) interpreter at uni in 2008. Funnily enough, I couldn't find recent references to LW, so actually I had to reverse engineer the semantics of the language and some examples reading my very old undocumented code.
+I did this compact LW (and its older brother, LWPlus) interpreter at uni in 2008. Funnily enough, I couldn't find recent references to LW, so actually I had to reverse engineer the semantics of the language (and some examples) reading my very old undocumented code.
 
-The language supports one type only (ints), it supports normal C scoping rules, while loops with continue. Programs read data from a file, and print out one or more values. There is no support function definition / invocation.
+The language supports one type only (ints), it supports C-like block scoping rules and while loops. Programs read data from a file, and print out the calculated output. There is no support function definition / invocation.
 
 There are two neat things about this: how compact the whole thing is (4 pages of code), and that the grammar for the language is actually not baked in the interpreter. Rather, it's read at runtime from a grammar file which is almost in BNF form, so one could tweak that a little, I thought that was quite cool, at the time :-). The semantics of the static checks and execution are baked in the interpreter though.
 
