@@ -1,7 +1,7 @@
-LW - A small didactic (toy) imperative language.
+A small interpreter for the didactic (toy) LW imperative language.
 ======
 
-LW is a small language used in some universities to teach the basics of imperative languages, and the concepts of static analysis, basic parsing, handling scope, what a state is, the difference between an expression and a command, and how to walk an AST tree to do static checks and to run the program.
+LW is a minimal imperative language used in some universities to teach the basics of imperative languages, and the concepts of static analysis, basic parsing, handling scope, what a state is, the difference between an expression and a command, and how to walk an AST tree to do static checks and to run the program.
 
 I did this compact LW (and it's extension, LWPlus) interpreter at uni in 2008. Funnily enough, I couldn't find recent references to LW, so actually I had to reverse engineer the semantics of the language and some examples reading my very old undocumented code.
 
