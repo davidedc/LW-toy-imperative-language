@@ -1,0 +1,4 @@
+inp INPUT do
+  OUTPUT := 1
+  out OUTPUT
+endp

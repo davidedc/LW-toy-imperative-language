@@ -1,0 +1,9 @@
+do
+  with FIRST begin
+    with SECOND begin
+      read FIRST ;
+      read SECOND ;
+      write sum FIRST SECOND
+    end
+  end
+endp

@@ -1,0 +1,5 @@
+inp INPUT do
+  OUTPUT := 0 ;
+  OUTPUT := sum INPUT 2
+  out OUTPUT
+endp

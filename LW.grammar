@@ -1,0 +1,56 @@
+          : | ^ # ~ Prog
+
+      Prog: #inp Id #do Coms #out Id #endp
+       Com: Assignment      |
+            #skip           |
+            IfThenElse      |
+            Block           |
+            WhileLoop
+Assignment: Id #:= Expr
+IfThenElse: #if Expr #= Expr #then Coms #else Coms #endif
+     Block: #with Id #begin Coms #end
+ WhileLoop: #while Expr #<> Expr #do Coms #endw
+      Coms: Com #;~ Coms 
+      Expr: #sum Expr Expr  |
+            #prod Expr Expr |
+            Id              |
+            Num
+
+        Id: Let ^ Let~ ^ Let~ ^ Let~ ^ Let~ ^ Let~ ^ Let~ ^ Let~ 
+
+       Let: #A | #B | #C | #D | #E | #F | #G | #H | #I | #J | #K | #L | #M | 
+            #N | #O | #P | #Q | #R | #S | #T | #U | #V | #W | #X | #Y | #Z 
+
+       Num: #+ ^ pos | #-2147483648 | #- ^ pos | pos
+
+       pos: one ^ ninedigit                                                              |
+            two ^ zero ^ eightdigit                                                      |
+            two ^ one  ^ three ^ sevendigit                                              |
+            two ^ one  ^ four  ^ six   ^ sixdigit                                        |
+            two ^ one  ^ four  ^ seven ^ three ^ fivedigit                               |
+            two ^ one  ^ four  ^ seven ^ four  ^ seven ^ fourdigit                       |
+            two ^ one  ^ four  ^ seven ^ four  ^ eight ^ two   ^ threedigit              |
+            two ^ one  ^ four  ^ seven ^ four  ^ eight ^ three ^ five ^ twodigit         |
+            two ^ one  ^ four  ^ seven ^ four  ^ eight ^ three ^ six  ^ three ^ digit    |
+            two ^ one  ^ four  ^ seven ^ four  ^ eight ^ three ^ six  ^ four  ^ seven    |
+            digit ^ digit~ ^ digit~ ^ digit~ ^ digit~ ^ digit~ ^ digit~ ^ digit~ ^ digit~
+
+     digit: #9 | #8 | #7 | #6 | #5 | #4 | #3 | #2 | #1 | #0
+     eight: #8 | #7 | #6 | #5 | #4 | #3 | #2 | #1 | #0
+     seven: #7 | #6 | #5 | #4 | #3 | #2 | #1 | #0
+       six: #6 | #5 | #4 | #3 | #2 | #1 | #0
+      five: #5 | #4 | #3 | #2 | #1 | #0
+      four: #4 | #3 | #2 | #1 | #0
+     three: #3 | #2 | #1 | #0
+       two: #2 | #1 | #0
+       one: #1 | #0
+      zero: #0
+
+ ninedigit: digit ^ digit ^ digit ^ digit ^ digit ^ digit ^ digit ^ digit ^ digit
+eightdigit: digit ^ digit ^ digit ^ digit ^ digit ^ digit ^ digit ^ digit
+sevendigit: digit ^ digit ^ digit ^ digit ^ digit ^ digit ^ digit
+  sixdigit: digit ^ digit ^ digit ^ digit ^ digit ^ digit
+ fivedigit: digit ^ digit ^ digit ^ digit ^ digit
+ fourdigit: digit ^ digit ^ digit ^ digit
+threedigit: digit ^ digit ^ digit
+  twodigit: digit ^ digit

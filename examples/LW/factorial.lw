@@ -1,0 +1,16 @@
+inp INPUT do
+
+  with PARTIAL begin
+    with COUNTER begin
+      COUNTER := INPUT ;
+      PARTIAL := 1 ;
+      while COUNTER <> 1 do
+        PARTIAL := prod PARTIAL COUNTER ;
+        COUNTER := sum COUNTER -1
+      endw ;
+      OUTPUT := PARTIAL
+    end
+  end
+
+  out OUTPUT
+endp

@@ -1,0 +1,13 @@
+do
+  with PARTIAL begin
+    with COUNTER begin
+      read COUNTER ;
+      PARTIAL := 1 ;
+      while COUNTER <> 1 do
+        PARTIAL := prod PARTIAL COUNTER ;
+        COUNTER := sum COUNTER -1
+      endw ;
+      write PARTIAL
+    end
+  end
+endp
